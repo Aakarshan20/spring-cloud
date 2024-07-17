@@ -1,0 +1,12 @@
+spring:
+    profiles:
+        active: dev
+server:
+    port: 8088
+    servlet:
+        context-path: /api
+
+mysql_user: root
+mysql_password: password
+
+
