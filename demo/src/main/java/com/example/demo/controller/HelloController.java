@@ -27,7 +27,7 @@ public class HelloController {
 
     PrintWriter writer = null;
 
-    //writer.close();
+    writer.close();
     return "hi " + name + ", i am from port:" + port + ", username:" + mysql.getUserName() + ", password: " + mysql.getPassword();
   }
 }
