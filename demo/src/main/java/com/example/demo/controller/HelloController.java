@@ -1,6 +1,9 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Mysql;
+
+import java.io.PrintWriter;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,9 +21,13 @@ public class HelloController {
   @RequestMapping("/hello")
   public String home(String name) {
 
-    System.out.println(mysql.getUser());
+    System.out.println(mysql.getUserName());
     System.out.println(mysql.getPassword());
 
-    return "hi " + name + ", i am from port:" + port;
+
+    PrintWriter writer = null;
+
+    //writer.close();
+    return "hi " + name + ", i am from port:" + port + ", username:" + mysql.getUserName() + ", password: " + mysql.getPassword();
   }
 }

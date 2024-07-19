@@ -7,17 +7,17 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootConfiguration
 public class Configuration {
-    @Value("${mysql_user}")
-    private String mysqlUser;
+    @Value("${spring.datasource.username}")
+    private String username;
 
-    @Value("${mysql_password}")
-    private String mysqlPassword;
+    @Value("${spring.datasource.password}")
+    private String password;
 
     @Bean
     public Mysql mysql(){
         Mysql mysql = new Mysql();
-        mysql.setUser(mysqlUser);
-        mysql.setPassword(mysqlPassword);
+        mysql.setUserName(username);
+        mysql.setPassword(password);
         return mysql;
     }
 }

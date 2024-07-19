@@ -2,3 +2,9 @@ server:
     port: 8089
     servlet:
         context-path: /api
+spring:
+    datasource:
+        url: http://dev.com
+        username: dev
+        password: devPWD
+        driverClassName: com.mysql.jdbc.Driver

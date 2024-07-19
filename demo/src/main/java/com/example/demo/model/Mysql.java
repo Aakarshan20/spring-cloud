@@ -1,10 +1,8 @@
 package com.example.demo.model;
 
-import java.util.Locale;
-import java.util.stream.Stream;
 
 public class Mysql {
-    private String user;
+    private String username;
     private String password;
 
     public String getPassword() {
@@ -15,11 +13,11 @@ public class Mysql {
         this.password = password;
     }
 
-    public String getUser() {
-        return user;
+    public String getUserName() {
+        return username;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setUserName(String username) {
+        this.username = username;
     }
 }

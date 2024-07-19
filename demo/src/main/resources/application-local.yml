@@ -2,3 +2,10 @@ server:
     port: 8087
     servlet:
         context-path: /api
+
+spring:
+    datasource:
+        url: http://localhost
+        username: local
+        password: localPwd
+        driverClassName: com.mysql.jdbc.Driver
