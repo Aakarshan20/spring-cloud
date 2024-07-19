@@ -1,3 +1,9 @@
 /.idea/
 /.vscode/
 /demo/.mvn/
+/euruka/.mvn/
+/euruka/mvnw
+/euruka/mvnw.cmd
+/provider/.mvn/
+/provider/mvnw
+/provider/mvnw.cmd

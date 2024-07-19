@@ -1,0 +1,26 @@
+server:
+  port: 9001 #端口
+
+spring:
+  application:
+    name: provider_service #服務名稱
+  # datasource:
+  #   driver-class-name: com.mysql.cj.jdbc.Driver #com.mysql.jdbc.Driver
+  #   url: jdbc:mysql://localhost:3306/spring_cloud_demo?useUnicode=true&characterEncoding=utf8
+  #   username: root
+  #   password: 1234Asdf
+  # jpa:
+  #   database: MySQL
+  #   show-sql: true
+  #   open-in-view: true
+
+#配置 Eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/ #若要註冊到多台 Eureka Server，可用逗號區隔
+      # http://localhost:8761/eureka/, 
+      # http://localhost:8762/eureka/ 
+  instance:
+    preferIpAddress: true #使用 IP 地址註冊
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} #向註冊中心註冊服務 Id，以供辨識
